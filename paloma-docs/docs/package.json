@@ -1,0 +1,20 @@
+{
+  "name": "paloma",
+  "version": "0.0.1",
+  "description": "Official Paloma chain documentation",
+  "main": "index.js",
+  "authors": {
+    "name": "Paloma",
+    "email": "danny@volume.finance"
+  },
+  "repository": "https://github.com/palomachain/paloma-docs/paloma",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3",
+    "vuepress-theme-dark": "^0.1.0"
+  }
+}

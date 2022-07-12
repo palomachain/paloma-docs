@@ -52,13 +52,23 @@ module.exports = {
           collapsable: false,
           children: [
             'abstract',
-            'introduction',
+            ['introduction', 'Introduction'],
+            'accounts',
+            'contracts',
           ]
         },
         {
           title: 'Schedule',
           collapsable: false,
           children: [
+            'accounts',
+          ]
+        },
+        {
+          title: 'Validate',
+          collapsable: false,
+          children: [
+            'Pigeon',
           ]
         },
         {

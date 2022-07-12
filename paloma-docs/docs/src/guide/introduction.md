@@ -1,7 +1,7 @@
 # Paloma
 ### The smart messaging chain
 
-Paloma is a Cosmos-SDK blockchain protocol for sending and receiving messages 
+Paloma is a Cosmos-SDK blockchain for sending and receiving messages 
 from any other blockchain. Paloma’s design aims to enable any developer to control 
 any smart contract from the Paloma network. Paloma may be compared to the numerous 
 cross-chain messaging protocols currently exploding into the cryptocurrency ecosystem, 

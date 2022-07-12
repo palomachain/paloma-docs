@@ -2,7 +2,7 @@
 home: true
 heroImage: https://github.com/palomachain/paloma/blob/master/assets/paloma.png?raw=true
 tagline: By Volume Finance
-actionText: Start Messaging →
+actionText: Start messaging →
 actionLink: /guide/abstract
 features:
 - title: Smart messages

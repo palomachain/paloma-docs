@@ -68,13 +68,6 @@ module.exports = {
           title: 'Validate',
           collapsable: false,
           children: [
-            'Pigeon',
-          ]
-        },
-        {
-          title: 'Validate',
-          collapsable: false,
-          children: [
           ]
         }
       ],

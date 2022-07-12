@@ -4,7 +4,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'The Smart Messaging Chain',
+  title: 'The Scrappy Messaging Chain',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -53,21 +53,15 @@ module.exports = {
           children: [
             'abstract',
             ['introduction', 'Introduction'],
-            'accounts',
-            'contracts',
-          ]
-        },
-        {
-          title: 'Schedule',
-          collapsable: false,
-          children: [
-            'accounts',
+            ['contracts', 'Writing a Contract'],
           ]
         },
         {
           title: 'Validate',
           collapsable: false,
           children: [
+            'accounts',
+            'pigeon',
           ]
         }
       ],

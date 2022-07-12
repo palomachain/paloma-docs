@@ -1,6 +1,6 @@
-## Accounts
+# Accounts
 
-LocalPaloma is the Paloma testnet that comes preconfigured with 
+`LocalPaloma` is the Paloma testnet that comes preconfigured with 
 opinionated, sensible defaults for standard testing environments,
 including one validator and ten accounts with GRAIN balances. 
 

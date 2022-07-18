@@ -4,7 +4,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'The Scrappy Messaging Chain',
+  title: 'The Scrappy Messanger Chain',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -48,20 +48,32 @@ module.exports = {
     sidebar: {
       '/guide/': [
         {
-          title: 'Quick Start',
+          title: 'Explore',
           collapsable: false,
           children: [
             'abstract',
             ['introduction', 'Introduction'],
             ['contracts', 'Writing a Contract'],
+            'pigeon',
+          ]
+        },
+        {
+          title: 'Develop',
+          collapsable: false,
+          children: [
+            'abstract',
           ]
         },
         {
           title: 'Validate',
           collapsable: false,
           children: [
-            'accounts',
-            'pigeon',
+            ['validate/manage-a-paloma-validator/validate-paloma', 'Get started'],
+            'validate/manage-a-paloma-validator/set-up-validator',
+            'validate/manage-a-paloma-validator/court-delegations',
+            'validate/manage-a-paloma-validator/implement-security',
+            'validate/manage-a-paloma-validator/troubleshoot-validator-problems',
+            'validate/manage-a-paloma-validator/faq',
           ]
         }
       ],

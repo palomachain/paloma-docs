@@ -8,7 +8,7 @@ cross-chain messaging protocols currently exploding into the cryptocurrency ecos
 but with a few key differences.
 
 Paloma messages are bidirectional between chains. For example, developers may write 
-solidity programs on Ethereum L1 that control contracts running on Osmosis or Fantom. 
+Solidity programs on Ethereum L1 that control contracts running on Osmosis or Fantom. 
 Paloma’s pigeons monitor these bidirectional messages and come to a consensus on their 
 execution, success, and subsequent logical call for further execution.
 

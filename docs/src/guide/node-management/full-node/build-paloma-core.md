@@ -1,7 +1,7 @@
 # Build Paloma
 
 Paloma is the official Golang reference implementation of the Paloma 
-node software. Use this guide to install Paloma and `Palomad`, the 
+node software. Use this guide to install Paloma and `palomad`, the 
 command-line interface and daemon that connects to Paloma and enables 
 you to interact with the Paloma blockchain.
 
@@ -14,14 +14,12 @@ using a Linux system.
 :::
 
 Running a full Paloma node is a resource-intensive process that 
-requires a persistent server. If you want to use Paloma without 
-downloading the entire blockchain, use 
-[Paloma Station](https://station.Paloma.money/).
+requires a persistent server.
 
 ## Get the Paloma source code
 
-1. Use `git` to retrieve [Paloma](https://github.com/Paloma-money/core/), 
-   and check out the `main` branch, which contains the latest stable release.
+1. Use `git` to retrieve [Paloma](https://github.com/palomachain/paloma), 
+   and check out the `master` branch, which contains the latest stable release.
 
 You can find out the latest tag on the [tags page](https://github.com/Paloma-money/core/tags) 
 or via autocomplete in your terminal: type `git checkout v` and press `<TAB>`.
@@ -33,7 +31,7 @@ or via autocomplete in your terminal: type `git checkout v` and press `<TAB>`.
     ```
 
 
-2. Build Paloma. This will install the `Palomad` executable to 
+2. Build Paloma. This will install the `palomad` executable to 
    your [ `GOPATH` ](https://go.dev/doc/gopath_code) environment variable.
 
    ```bash
@@ -43,14 +41,14 @@ or via autocomplete in your terminal: type `git checkout v` and press `<TAB>`.
 3. Verify that Paloma is installed correctly.
 
    ```bash
-   Palomad version --long
+   palomad version --long
    ```
 
    **Example**:
 
    ```bash
-   name: Paloma
-   server_name: Palomad
+   name: paloma
+   server_name: palomad
    version: v2.0.0
    commit: ea682c41e7e71ba0b182c9e7f989855fb9595885
    build_tags: netgo,ledger
@@ -60,7 +58,7 @@ or via autocomplete in your terminal: type `git checkout v` and press `<TAB>`.
 
 :::tip
 
-If the `Palomad: command not found` error message is returned, confirm that 
+If the `palomad: command not found` error message is returned, confirm that 
 the Go binary path is correctly configured by running the following command:
 
 ```bash
@@ -72,15 +70,15 @@ export PATH=$PATH:$(go env GOPATH)/bin
 ## Configure general settings
 
 The following information describes the most important node configuration 
-settings found in the `~/.Paloma/config/` directory. It is 
+settings found in the `~/.paloma/config/` directory. It is 
 recommended that you update these settings with your own information.
 
-:::detail Structure of .Paloma/config
+:::detail Structure of .paloma/config
 
 ```bash
-~/.Paloma/config
+~/.paloma/config
 │-- addrbook.json                       # a registry of peers to connect to
-│-- app.toml                            # Palomad configuration file
+│-- app.toml                            # palomad configuration file
 │-- client.toml                         # configurations for the cli wallet (ex Palomacli)
 │-- config.toml                         # Tendermint configuration  file
 │-- genesis.json                        # gensesis transactions
@@ -95,7 +93,7 @@ recommended that you update these settings with your own information.
 Initialize the node with a human-readable name:
 
 ```bash
-Palomad init <your_custom_moniker> # ex., Palomad init validator-joes-node
+palomad init <your_custom_moniker> # ex., palomad init validator-joes-node
 ```
 
 :::warning Moniker characters
@@ -106,11 +104,11 @@ will render your node unreachable by other peers in the network.
 :::
 
 You can update your node's moniker by editing the `moniker` field 
-in `~/.Paloma/config/config.toml`
+in `~/.paloma/config/config.toml`
 
 ### Update minimum gas prices
 
-1. Open `~/.Paloma/config/app.toml`.
+1. Open `~/.paloma/config/app.toml`.
 
 2. Modify `minimum-gas-prices` and set the minimum price of gas a validator 
    will accept to validate a transaction and to prevent spam.
@@ -150,7 +148,7 @@ API and Swagger, and to start the LCD, complete the following steps:
    swagger = true
    ```
 
-5. Restart the service via `systemctl restart Palomad`. Once restarted, the LCD 
+5. Restart the service via `systemctl restart palomad`. Once restarted, the LCD 
    will be available (by default on port `127.0.0.1:1317`)
 
 ### Set up `external_address` in `config.toml`
@@ -160,5 +158,5 @@ In order to be added to the address book in seed nodes, you need to configure
 The default P2P_PORT is 26656.
 
    ```sh
-   sed -i -e 's/external_address = \"\"/external_address = \"'$(curl httpbin.org/ip | jq -r .origin)':26656\"/g' ~/.Paloma/config/config.toml
+   sed -i -e 's/external_address = \"\"/external_address = \"'$(curl httpbin.org/ip | jq -r .origin)':26656\"/g' ~/.paloma/config/config.toml
    ```

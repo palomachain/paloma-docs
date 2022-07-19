@@ -11,6 +11,8 @@ the Paloma blockchain's financial primitives. These decentralized
 applications unlock new avenues of value-transfer through enabling 
 unique transaction flows not provided by Paloma's native modules.
 
+Smart contracts on Paloma are written in Rust, using the CosmWasm framework.
+
 :::tip
 
 To better understand the building blocks of the smart contract you will build in this tutorial, 

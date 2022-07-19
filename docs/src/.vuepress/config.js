@@ -54,29 +54,53 @@ module.exports = {
           children: [
             'abstract',
             ['introduction', 'Introduction'],
-            ['contracts', 'Writing a Contract'],
-            'pigeon',
           ]
         },
         {
           title: 'Develop',
           collapsable: false,
           children: [
-            'abstract',
+            {
+              title: 'Smart Contracts',
+              collapsable: false,
+              children: [
+                ['contracts', 'Writing a Contract'],
+              ]
+            },
           ]
         },
         {
-          title: 'Validate',
+          title: 'Maintain',
           collapsable: false,
           children: [
-            ['validate/manage-a-paloma-validator/validate-paloma', 'Get started'],
-            'validate/manage-a-paloma-validator/set-up-validator',
-            'validate/manage-a-paloma-validator/court-delegations',
-            'validate/manage-a-paloma-validator/implement-security',
-            'validate/manage-a-paloma-validator/troubleshoot-validator-problems',
-            'validate/manage-a-paloma-validator/faq',
+            'pigeon',
+            {
+              title: 'Full node',
+              collapsable: false,
+              children: [
+                'node-management/full-node/system-config',
+                'node-management/full-node/build-paloma-core',
+                'node-management/full-node/set-up-production',
+                'node-management/full-node/join-a-network',
+                'node-management/full-node/sync',
+                'node-management/full-node/troubleshoot',
+                'node-management/full-node/updates-and-additional',
+              ]
+            },
+            {
+              title: 'Validate',
+              collapsable: false,
+              children: [
+                ['validate/manage-a-paloma-validator/validate-paloma', 'Get started'],
+                'validate/manage-a-paloma-validator/set-up-validator',
+                'validate/manage-a-paloma-validator/court-delegations',
+                'validate/manage-a-paloma-validator/implement-security',
+                'validate/manage-a-paloma-validator/troubleshoot-validator-problems',
+                'validate/manage-a-paloma-validator/faq',
+              ]
+            },
           ]
-        }
+        },
       ],
     }
   },

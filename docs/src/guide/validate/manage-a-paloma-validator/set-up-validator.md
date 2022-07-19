@@ -149,7 +149,7 @@ Palomad tx staking create-validator \
     --min-self-delegation="1"
 ```
 
-:::caution
+:::warning Caution
 
 When you specify commission parameters, the `commission-max-change-rate` 
 is measured as a percentage-point change of the `commission-rate`. For example, 

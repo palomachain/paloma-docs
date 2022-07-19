@@ -1,17 +1,6 @@
-# Accounts
+## Accounts
 
-`LocalPaloma` is the Paloma testnet that comes preconfigured with 
-opinionated, sensible defaults for standard testing environments,
-including one validator and ten accounts with GRAIN balances. 
-
-LocalPaloma has the following advantages over a public testnet:
-
-* Easily modifiable world states
-* Quick to reset for rapid iterations
-* Simple simulations of different scenarios
-* Controllable validator behavior
-
-::: details LocalPaloma Accounts
+LocalPaloma is pre-configured with one validator and 10 accounts with LUNA balances.
 
 | Account   | Address                                                                                                  | Mnemonic                                                                                                                                                                   |
 | --------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -26,5 +15,3 @@ LocalPaloma has the following advantages over a public testnet:
 | test8     | `Paloma1lkccuqgj6sjwjn8gsa9xlklqv4pmrqg9dx2fxc`                                                           | `cream sport mango believe inhale text fish rely elegant below earth april wall rug ritual blossom cherry detail length blind digital proof identify ride`                 |
 | test9     | `Paloma1333veey879eeqcff8j3gfcgwt8cfrg9mq20v6f`                                                           | `index light average senior silent limit usual local involve delay update rack cause inmate wall render magnet common feature laundry exact casual resource hundred`       |
 | test10    | `Paloma1fmcjjt6yc9wqup2r06urnrd928jhrde6gcld6n`                                                           | `prefer forget visit mistake mixture feel eyebrow autumn shop pair address airport diesel street pass vague innocent poem method awful require hurry unhappy shoulder`     |
-
-:::

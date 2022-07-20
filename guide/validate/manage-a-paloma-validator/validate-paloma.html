@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Validating on Paloma | The Scrappy Messanger Chain</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="Official Paloma chain documentation">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/paloma-docs/assets/css/0.styles.8fddd64b.css" as="style"><link rel="preload" href="/paloma-docs/assets/js/app.e40c76e8.js" as="script"><link rel="preload" href="/paloma-docs/assets/js/2.1fdbdfe2.js" as="script"><link rel="preload" href="/paloma-docs/assets/js/29.0ba30bc5.js" as="script"><link rel="prefetch" href="/paloma-docs/assets/js/10.950d7182.js"><link rel="prefetch" href="/paloma-docs/assets/js/11.643315d0.js"><link rel="prefetch" href="/paloma-docs/assets/js/12.e485cced.js"><link rel="prefetch" href="/paloma-docs/assets/js/13.e8569ca1.js"><link rel="prefetch" href="/paloma-docs/assets/js/14.ddddc403.js"><link rel="prefetch" href="/paloma-docs/assets/js/15.44e5e036.js"><link rel="prefetch" href="/paloma-docs/assets/js/16.df0c85a3.js"><link rel="prefetch" href="/paloma-docs/assets/js/17.04ab9d3d.js"><link rel="prefetch" href="/paloma-docs/assets/js/18.a0251560.js"><link rel="prefetch" href="/paloma-docs/assets/js/19.e081162d.js"><link rel="prefetch" href="/paloma-docs/assets/js/20.3a89c129.js"><link rel="prefetch" href="/paloma-docs/assets/js/21.67bf544c.js"><link rel="prefetch" href="/paloma-docs/assets/js/22.1cbfb257.js"><link rel="prefetch" href="/paloma-docs/assets/js/23.38a75b84.js"><link rel="prefetch" href="/paloma-docs/assets/js/24.c0872872.js"><link rel="prefetch" href="/paloma-docs/assets/js/25.216e224a.js"><link rel="prefetch" href="/paloma-docs/assets/js/26.9e02e309.js"><link rel="prefetch" href="/paloma-docs/assets/js/27.e3b8c440.js"><link rel="prefetch" href="/paloma-docs/assets/js/28.1897ae40.js"><link rel="prefetch" href="/paloma-docs/assets/js/3.601e0c55.js"><link rel="prefetch" href="/paloma-docs/assets/js/30.5b20594d.js"><link rel="prefetch" href="/paloma-docs/assets/js/4.a1b6e084.js"><link rel="prefetch" href="/paloma-docs/assets/js/5.62ecc74a.js"><link rel="prefetch" href="/paloma-docs/assets/js/6.1f639627.js"><link rel="prefetch" href="/paloma-docs/assets/js/7.0c461132.js"><link rel="prefetch" href="/paloma-docs/assets/js/8.a17fd264.js"><link rel="prefetch" href="/paloma-docs/assets/js/9.e49991d9.js">
+    <link rel="stylesheet" href="/paloma-docs/assets/css/0.styles.8fddd64b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/paloma-docs/" class="home-link router-link-active"><!----> <span class="site-name">The Scrappy Messanger Chain</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/paloma-docs/guide/abstract.html" class="nav-link">
+    Docs
+  </a></div><div class="nav-item"><a href="https://www.palomachain.com/blog/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+    Blog
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/palomachain/paloma" target="_blank" rel="noopener noreferrer" class="nav-link external">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/paloma-docs/guide/abstract.html" class="nav-link">
+    Docs
+  </a></div><div class="nav-item"><a href="https://www.palomachain.com/blog/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+    Blog
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/palomachain/paloma" target="_blank" rel="noopener noreferrer" class="nav-link external">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Explore</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/paloma-docs/guide/abstract.html" class="sidebar-link">Abstract</a></li><li><a href="/paloma-docs/guide/introduction.html" class="sidebar-link">Introduction</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Develop</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group is-sub-group depth-1"><p class="sidebar-heading open"><span>Smart Contracts</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/paloma-docs/guide/contracts.html" class="sidebar-link">Writing a Contract</a></li></ul></section></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Maintain</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/paloma-docs/guide/pigeon.html" class="sidebar-link">Message with Pigeon</a></li><li><section class="sidebar-group is-sub-group depth-1"><p class="sidebar-heading"><span>Full node</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/paloma-docs/guide/node-management/full-node/system-config.html" class="sidebar-link">System configuration</a></li><li><a href="/paloma-docs/guide/node-management/full-node/build-paloma-core.html" class="sidebar-link">Build Paloma</a></li><li><a href="/paloma-docs/guide/node-management/full-node/set-up-production.html" class="sidebar-link">Set up a production environment</a></li><li><a href="/paloma-docs/guide/node-management/full-node/join-a-network.html" class="sidebar-link">Join a network</a></li><li><a href="/paloma-docs/guide/node-management/full-node/sync.html" class="sidebar-link">Sync</a></li><li><a href="/paloma-docs/guide/node-management/full-node/troubleshoot.html" class="sidebar-link">Reset and troubleshooting</a></li><li><a href="/paloma-docs/guide/node-management/full-node/updates-and-additional.html" class="sidebar-link">Updates and additional settings</a></li></ul></section></li><li><section class="sidebar-group is-sub-group depth-1"><p class="sidebar-heading open"><span>Validate</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/paloma-docs/guide/validate/manage-a-paloma-validator/validate-paloma.html" aria-current="page" class="active sidebar-link">Get started</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/paloma-docs/guide/validate/manage-a-paloma-validator/validate-paloma.html#validator-responsibilities" class="sidebar-link">Validator responsibilities</a></li><li class="sidebar-sub-header"><a href="/paloma-docs/guide/validate/manage-a-paloma-validator/validate-paloma.html#validator-states" class="sidebar-link">Validator states</a></li><li class="sidebar-sub-header"><a href="/paloma-docs/guide/validate/manage-a-paloma-validator/validate-paloma.html#incentive-scheme" class="sidebar-link">Incentive scheme</a></li><li class="sidebar-sub-header"><a href="/paloma-docs/guide/validate/manage-a-paloma-validator/validate-paloma.html#slashing" class="sidebar-link">Slashing</a></li><li class="sidebar-sub-header"><a href="/paloma-docs/guide/validate/manage-a-paloma-validator/validate-paloma.html#additional-resources" class="sidebar-link">Additional resources</a></li></ul></li><li><a href="/paloma-docs/guide/validate/manage-a-paloma-validator/set-up-validator.html" class="sidebar-link">How to run a Paloma Validator</a></li><li><a href="/paloma-docs/guide/validate/manage-a-paloma-validator/court-delegations.html" class="sidebar-link">Build a Delegator Community</a></li><li><a href="/paloma-docs/guide/validate/manage-a-paloma-validator/implement-security.html" class="sidebar-link">Key management and security practices</a></li><li><a href="/paloma-docs/guide/validate/manage-a-paloma-validator/troubleshoot-validator-problems.html" class="sidebar-link">Troubleshoot validator problems</a></li><li><a href="/paloma-docs/guide/validate/manage-a-paloma-validator/faq.html" class="sidebar-link">Validator FAQ</a></li></ul></section></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="validating-on-paloma"><a href="#validating-on-paloma" class="header-anchor">#</a> Validating on Paloma</h1> <p>Paloma is powered by the Tendermint consensus, an asynchronous, BFT
+consensus mechanism that uses DPoS (delegated proof of stake). Validators
+participating in consensus will propose blocks of transactions from the
+mempool and aim reach consensus by broadcasting votes on their state.
+Validators on Paloma are required to run full nodes, commit new blocks to
+the Paloma blockchain, and participate in governance.</p> <p>Paloma validators are elected into the validator pool by delegated stake
+from Paloma delegators, and will cast votes on behalf of their delegators.
+A validator's voting power is weighted according to their total stake.</p> <p>The top 130 validators make up the <strong>active validator set</strong> and are the
+only validators that sign blocks and receive revenue from block production.</p> <h2 id="validator-responsibilities"><a href="#validator-responsibilities" class="header-anchor">#</a> Validator responsibilities</h2> <p>On Paloma, a validator must:</p> <ul><li><p><strong>Run the correct software versions:</strong> Validators need to make sure that
+their servers are always online, and that their private keys are not compromised.</p></li> <li><p><strong>Provide oversight and feedback on the correct deployment of community pool funds:</strong>
+The Paloma protocol includes a governance system for proposals to facilitate the
+adoption of its currencies. Validators are expected to hold budget executors to
+provide transparency and to use funds efficiently.</p></li> <li><p><strong>Be active members of the community:</strong> Validators should always be up-to-date with
+the current state of the ecosystem so that they can easily adapt to any change.</p></li></ul> <div class="custom-block danger"><p class="custom-block-title">System administration</p> <p>Validating requires a significant amount of system administration
+knowledge and experience. and should be only pursued if a user has
+significant system administration experience.</p> <p>Validators are required to stake real value through a bond deposit
+on the chain in order to participate in consensus. Mis-operation of a
+validator can led to serious consequences that result in the loss of
+funds.</p> <p>When in doubt, never hesitate to reach out to the Paloma or Cosmos
+community for questions or concerns about validating.</p></div> <p>A successful validator operation will require the efforts of multiple
+highly-skilled individuals and continuous operational attention.
+Running a validator is considerably more involved than mining bitcoin.
+Running an effective operation is critical to avoiding unexpected
+unbonding or being slashed. This includes being able to respond to
+attacks, outages, as well as to maintain security and isolation in your
+data center.</p> <details class="custom-block details"><summary>New validators</summary> <p>Take advantage of the testnet environment if you would like to get
+started with validating on Paloma. Start by setting up a full node and
+understand the different components.</p> <p>Take the time to dipher what is happening on-chain when blocks are
+produced, how consensus operates as a state machine, and how consensus
+is reached. Break down transactions, how validators verify and sign
+transactions, the block structure, the commitment scheme, and more.</p> <p>Paloma is an omnichain interoperability protocol built on the
+CosmosSDK, meaning, validators should understand message passing
+and cross-chain consensus.</p> <p>Don't rush into validating if you feel like there are gaps that may
+jepordize your funds. Of course, there is always a risk when staking
+on the blockchain, but there is a big difference when staking with
+confidence and staking without.</p></details> <h2 id="validator-states"><a href="#validator-states" class="header-anchor">#</a> Validator states</h2> <p>After a validator is created with the <code>create-validator</code>
+transaction, it can be in three states:</p> <ul><li><p><code>bonded</code>: A validator that is in the active set and participates in consensus.
+This validator is earning rewards and can be slashed for misbehavior.</p></li> <li><p><code>unbonding</code>: A validator that is not in the active set and can't not participate
+in consensus. This validator is not earning rewards but can still be slashed for
+misbehaviour. This is a transition state from <code>bonded</code> to <code>unbonded</code>. If a validator
+does not send a <code>rebond</code> transaction while in <code>unbonding</code> mode, it will take three
+weeks for the state transition to complete.</p></li> <li><p><code>unbonded</code>: A validator that is not in the active set and not signing blocks.
+Unbonded validators can't be slashed and can't earn any rewards from their operation.
+It is still possible to delegate GRAIN to unbonded validators. Un-delegating from
+an <code>unbonded</code> validator is immediate.</p></li></ul> <p>All Delegators have the same state as their validator.</p> <p>Delegations are not necessarily bonded. GRAIN can be delegated and bonded, delegated
+and unbonding, delegated and unbonded, or liquid.</p> <h2 id="incentive-scheme"><a href="#incentive-scheme" class="header-anchor">#</a> Incentive scheme</h2> <p>Each member of a validator's staking pool (validators and their associated delegators)
+earns revenue:</p> <ul><li><p><a href="/paloma-docs/guide/learn/fees.html#gas">Gas</a>:
+Transactions are gas metered on Paloma and fees are added onto each
+transaction to pay for the consumption of computational resources during
+execution. This also helps to prevent transaction spamming.</p></li> <li><p><a href="/paloma-docs/guide/develop/module-specifications/spec-mint.html">Inflation rewards</a>:
+Every block, new GRAIN is minted and released to validators and delegators
+as staking rewards. The rate for the minting of this new GRAIN is fixed at 7%
+per year.</p></li></ul> <p>This total revenue is divided among a validator's staking pool according to each
+validator's weight. The revenue is then divided among delegators in proportion to
+each delegator's stake. Note that a commission on delegators' revenue is applied
+by the validator before it is distributed.</p> <h3 id="validator-commission"><a href="#validator-commission" class="header-anchor">#</a> Validator commission</h3> <p>Validators can set commissions on the fees they receive as an additional incentive.</p> <p>The revenue received by a validator's pool is split between a validator and
+their delegators. A validator can apply a commission on the part of the revenue
+that goes to its delegators. This commission is set as a percentage. Each validator
+is free to set its initial commission, maximum daily commission change rate, and
+maximum commission. The mainnet enforces the parameters that each validator sets.
+These parameters can only be defined when initially declaring candidacy, and may
+only be constrained further after being declared.</p> <p>Validators who set their commission rate to 100% are not seeking delegations as the
+entire commission goes to them. This is the case when the validator has enough
+self-stake.</p> <h3 id="block-provisions-distribution"><a href="#block-provisions-distribution" class="header-anchor">#</a> Block provisions distribution</h3> <p>Block provisions are distributed proportionally to each validator relative to their
+total stake. This means that even though each validator gains rewards with each provision,
+all validators will still maintain equal weight.</p> <h3 id="fees-distribution"><a href="#fees-distribution" class="header-anchor">#</a> Fees distribution</h3> <p>Fees are distributed to validators in the same way as commission: proportionally to
+each validator relative to their total stake. A Block proposer can also get a bonus if
+the proposer includes more than the minimum of required precommits.</p> <h3 id="block-rewards"><a href="#block-rewards" class="header-anchor">#</a> Block rewards</h3> <p>When a validator is selected to propose the next block, they must include at least
+two-thirds of the precommits for the previous block in the form of validator signatures.
+Proposers who include more than two thirds receive a bonus proportional to the amount of
+additional precomits. This reward ranges from 1% if the proposer includes two thirds of the
+precommits to 5% if the proposer includes 100% of the precommits. If a proposer waits too
+long however, other validators may timeout and move on to the next proposer. This is why
+validators have to find a balance between wait time to get the most signatures and the risk
+of losing out on proposing the next block. This feature aims to incentivize non-empty block
+proposals, better networking between validators, and to mitigate censorship.</p> <details class="custom-block details"><summary>Block reward example</summary> <p>There are 10 validators with equal stake. Each has a 1% commission and 20% self-bonded
+GRAIN. If a successful block collects 1005 SDT in fees, and the proposer includes 100% of
+the signatures in their block, they will receive the full 5% bonus.</p> <p>Use this simple equation to find the reward $R$ for each validator:</p> <p>$$9R ~ + ~ R ~ + ~ 5%(R) ~ = ~ 1005 ~ \Leftrightarrow ~ R ~ = ~ 1005 ~/ ~10.05 ~ = ~ 100$$</p> <ul><li><p>For the validator that proposes a block:</p> <ul><li>The pool obtains $R ~ + ~ 5%(R)$: 105 SDT</li> <li>Commission: 105 SDT ~ * ~ 80% ~ * ~ 1%$ = 0.84 SDT</li> <li>Validator's reward: 105 SDT ~ * ~ 20% ~ + ~ Commission$ = 21.84 SDT</li> <li>Delegators' rewards: 105 SDT ~ * ~ 80% ~ - ~ Commission$ = 83.16 SDT (each delegator will be able to claim its portion of these rewards in proportion to their stake)</li></ul></li> <li><p>For all other validators:</p> <ul><li>The pool obtains $R$: 100 SDT</li> <li>Commission: 100 SDT ~ * ~ 80% ~ * ~ 1%$ = 0.8 SDT</li> <li>Validator's reward: 100 SDT ~ * ~ 20% ~ + ~ Commission$ = 20.8 SDT</li> <li>Delegators' rewards: 100 SDT ~ * ~ 80% ~ - ~ Commission$ = 79.2 SDT (each delegator will be able to claim its portion of these rewards in proportion to their stake)</li></ul></li></ul></details> <h2 id="slashing"><a href="#slashing" class="header-anchor">#</a> Slashing</h2> <div class="custom-block danger"><p class="custom-block-title">Warning</p> <p>Even if a validator does not intentionally misbehave, it
+can still be slashed if its node crashes, loses connectivity, gets
+DDoSed, or if its private key is compromised.</p></div> <p>If a validator misbehaves, their bonded stake along with their delegators'
+stake will be slashed. The severity of the punishment depends on the type of fault.
+There are main faults that can result in slashing of funds:</p> <ul><li><p><strong>Double-signing:</strong> If someone reports on chain A that a validator signed two blocks
+at the same height on chain A and chain B, and if chain A and chain B share a common
+ancestor, then this validator will get slashed on chain A.</p></li> <li><p><strong>Unavailability:</strong> If a validator's signature has not been included in the last
+X blocks, the validator will get slashed by a marginal amount proportional to X.
+If X is above a certain limit, then the validator will get unbonded.</p></li></ul> <h2 id="additional-resources"><a href="#additional-resources" class="header-anchor">#</a> Additional resources</h2> <ul><li><a href="https://discord.com/invite/xfZK6RMFFx" target="_blank" rel="noopener noreferrer">Paloma validator Discord<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>.</li> <li><a href="https://www.youtube.com/watch?v=2lKAvltKX6w&amp;ab_channel=PalomaBites" target="_blank" rel="noopener noreferrer">How to Spin Up a Node on Paloma - Paloma Bites video<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>.</li> <li><a href="/paloma-docs/guide/validate/manage-a-paloma-validator/faq.html">The validator FAQ</a></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/paloma-docs/guide/node-management/full-node/updates-and-additional.html" class="prev">
+          Updates and additional settings
+        </a></span> <span class="next"><a href="/paloma-docs/guide/validate/manage-a-paloma-validator/set-up-validator.html">
+          How to run a Paloma Validator
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/paloma-docs/assets/js/app.e40c76e8.js" defer></script><script src="/paloma-docs/assets/js/2.1fdbdfe2.js" defer></script><script src="/paloma-docs/assets/js/29.0ba30bc5.js" defer></script>
+  </body>
+</html>

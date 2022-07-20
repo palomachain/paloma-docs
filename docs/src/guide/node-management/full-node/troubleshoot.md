@@ -37,8 +37,8 @@ To change the genesis version, delete `~/.Paloma/config/genesis.json`.
 You can recreate a genesis version via the following steps:
 
 ```bash
- Palomad add-genesis-account $(Palomad keys show <account-name> -a) 100000000uluna,1000usd
- Palomad gentx <account-name> 10000000uluna --chain-id=<network-name> 
+ Palomad add-genesis-account $(Palomad keys show <account-name> -a) 100000000ugrain,1000usd
+ Palomad gentx <account-name> 10000000ugrain --chain-id=<network-name> 
  Palomad collect-gentxs
 ```
 

@@ -91,7 +91,7 @@ and eventually becoming **unbonded**, or inactive.
 
 ### Validator keys
 
-**Tendermint Consensus Keypair:**: This Consensus Keypair is on the 
+**Tendermint Consensus Keypair:**: This consensus keypair is on the 
 [tendermint](https://docs.tendermint.com/master/nodes/validators.html#validator-keys) 
 layer and consists of a unique Private Key used to sign block hashes associated 
 with a Public Key `Palomavalconspub`.

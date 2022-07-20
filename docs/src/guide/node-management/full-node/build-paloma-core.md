@@ -133,9 +133,7 @@ For information about the available Paloma REST API endpoints, see the
 API and Swagger, and to start the LCD, complete the following steps:
 
 1. Open `~/.Paloma/config/app.toml`.
-
 2. Locate the `API Configuration` section (`[api]`).
-
 3. Change `enable = false` to `enable = true`.
 
    ```toml

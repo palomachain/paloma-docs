@@ -15,8 +15,7 @@ running a full Paloma node before joining a public network.
 :::tip LocalPaloma
 
 If you are a developer and want to set up a local, WASM-enabled, private 
-testnet for smart contracts, visit 
-[install LocalPaloma](../../develop/localPaloma/README.md).
+testnet for smart contracts, install LocalPaloma.
 
 :::
 
@@ -80,18 +79,16 @@ the following steps:
 
 Specify the network you want to join by choosing the corresponding **genesis file** and **seeds**:
 
-| Network      | Type                    | Genesis                                                                                             | Addressbook                                                                                                |
-| :----------- | :---------------------- | :-------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------- |
-| `phoenix-1`  | Mainnet                 | [Genesis Link]()                                                                                    | [Addressbook Link]()                                                                                       |
-| `pisco-1`    | Testnet                 | [Genesis Link]()                                                                                    | [Addressbook Link]()                                                                                       |
-| `columbus-5` | Mainnet (Paloma Classic) | [Genesis Link](https://columbus-genesis.s3.ap-northeast-1.amazonaws.com/columbus-5-genesis.json)    | [Addressbook Link](https://network.Paloma.dev/addrbook.json)                                                |
-| `bombay-12`  | Testnet (Paloma Classic) | [Genesis Link](https://raw.githubusercontent.com/Paloma-money/testnet/master/bombay-12/genesis.json) | [ Addressbook Link ](https://raw.githubusercontent.com/Paloma-money/testnet/master/bombay-12/addrbook.json) |
+| Network       | Type                    | Genesis                                                                                             | Addressbook                                                                                                |
+| :------------ | :---------------------- | :-------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------- |
+| `paloma`      | Mainnet                 | [Genesis Link]()                                                                                    | [Addressbook Link]()                                                                                       |
+| `TestNest-6`  | Testnet                 | [Genesis Link]()                                                                                    | [Addressbook Link]()                                                                                       |
 
 :::tip Selecting a network
 
 Note that the versions of the network listed above are the 
-[latest versions](https://github.com/Paloma-money/testnet/tree/master#latest-networks). 
-To find earlier versions, please consult the [networks repo](https://github.com/Paloma-money/testnet).
+[latest versions](https://github.com/Palomachain/paloma/latest-releases). 
+To find earlier versions, please consult the [networks repo](https://github.com/Palomachain/paloma).
 
 :::
 
@@ -180,11 +177,11 @@ Palomad status
 Your node is now syncing. This process will take a long time. Make sure 
 you've set it up on a stable connection so you can leave while it syncs.
 
-::: {admonition} Sync start times
-:class: caution
+:::warning Sync start times
 
 Nodes take at least an hour to start syncing. This wait is normal. 
 Before troubleshooting a sync, please wait an hour for the sync to start.
+
 :::
 
 Continue to the [Sync](sync.md) page to find out more about syncing your node.

@@ -4,7 +4,11 @@ Use this guide to solve the most common validator problems.
 
 ## Validator has 0 voting power
 
-If your validator has 0 voting power, your validator has become auto-unbonded. On the mainnet, validators unbond when they do not vote on `9500` of the last `10000` blocks (`50` of the last `100` blocks on the testnet). Because blocks are proposed every ~5 seconds, a validator that is unresponsive for ~13 hours (~4 minutes on testnet) become unbonded. This problem usually happens when your `Palomad` process crashes.
+If your validator has 0 voting power, your validator has become auto-unbonded. 
+On the mainnet, validators unbond when they do not vote on `9500` of the last `10000` 
+blocks (`50` of the last `100` blocks on the testnet). Because blocks are proposed every 
+~5 seconds, a validator that is unresponsive for ~13 hours (~4 minutes on testnet) 
+become unbonded. This problem usually happens when your `Palomad` process crashes.
 
 To return the voting power back to your validator:
 
@@ -23,8 +27,11 @@ To return the voting power back to your validator:
    - `<Paloma>` is the address of your validator account.
    - `<name>` is the name of the validator account. To find this information, run `Palomad keys list`.
 
-   ::: {warning}
-   If you don't wait for `Palomad` to sync before running `unjail`, an error message will inform you that your validator is still jailed.
+   :::warning
+
+   If you don't wait for `Palomad` to sync before running `unjail`, an error 
+   message will inform you that your validator is still jailed.
+
    :::
 
 3.  Check your validator again to see if your voting power is back:
@@ -37,18 +44,21 @@ To return the voting power back to your validator:
 
 ## `Palomad` crashes because of too many open files
 
-The default number of files Linux can open per process is `1024`. `Palomad` is known to open more than this amount, causing the process to crash.
+The default number of files Linux can open per process is `1024`. `Palomad` is
+known to open more than this amount, causing the process to crash.
 
 1. Increase the number of open files allowed by running `ulimit -n 4096`.  
 
 2. Restart the process with `Palomad start`.
 
-   If you are using `systemd` or another process manager to launch `Palomad`, you might need to configure them. The following  sample `systemd` file fixes the problem:
+   If you are using `systemd` or another process manager to launch `Palomad`, 
+   you might need to configure them. The following  sample `systemd` file fixes 
+   the problem:
 
    ```systemd
    # /etc/systemd/system/Palomad.service
    [Unit]
-   Description=Paloma Columbus Node
+   Description=Paloma Testnet Node
    After=network.target
 
    [Service]
@@ -65,7 +75,9 @@ The default number of files Linux can open per process is `1024`. `Palomad` is k
    ```
 ## `Palomad` crashes because of memory fragmentation
 
-As described in [this issue](https://github.com/Paloma-money/core/issues/592), huge memory allocation can cause memory fragmentation issue. Temporal solution is just using small wasm cache size like 50~100MB.
+As described in [this issue](https://github.com/Paloma-money/core/issues/592), huge 
+memory allocation can cause memory fragmentation issue. Temporal solution is just using 
+small wasm cache size like 50~100MB.
 
 `v0.5.10+`:
 
@@ -85,4 +97,6 @@ write-vm-memory-cache-size = 100
 
     `Palomad tx slashing unjail <Paloma> --chain-id=<chain_id> --from=<from>`
 
-- The validator is not in the [active validator set](../../learn/glossary.md#active-set). Only the top 130 validators are in this set. To fix this problem, increase your total stake to be larger than the 130th validator.
+- The validator is not in the [active validator set](../../learn/glossary.md#active-set). 
+  Only the top 130 validators are in this set. To fix this problem, increase your total 
+  stake to be larger than the 130th validator.

@@ -44,9 +44,9 @@ version of GO installed (v1.18+).
 :::
 
 The previous command uses `master` as it contains the latest stable release. 
-See the [testnet repo](https://github.com/Paloma-money/testnet) for details 
+See the [testnet repo](https://github.com/palomachain/testnet) for details 
 on which version is needed for which testnet, and the 
-[Paloma release page](https://github.com/palomachain/paloma/releases) for details on each release.
+[Paloma release page](https://github.com/palomachain/testnet/releases) for details on each release.
 
 Your full node is now cleanly upgraded!
 
